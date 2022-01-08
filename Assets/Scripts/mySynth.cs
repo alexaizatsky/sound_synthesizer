@@ -80,13 +80,10 @@ public class mySynth : MonoBehaviour
         moogFilterR.SetOversampling(1);
     }
 
-    private int index;
+
     public void StartPlay(int note, int octave)
-    {
-        index++;
-        print("START PLAY "+index);
-     //   if (isPlaying == false)
-            ResetSound();
+    { 
+        ResetSound();
         myFmFreq = Midi2freq(note, octave);
         osc1.SetFrequency(Midi2freq(note, octave));
         osc2.SetFrequency(Midi2freq(note, octave));
@@ -97,7 +94,6 @@ public class mySynth : MonoBehaviour
     
     public void StopPlay()
     {
-      //  ResetSound();
         if (isPlaying)
         {
             endPlayB = true;
@@ -121,42 +117,32 @@ public class mySynth : MonoBehaviour
     {
         if (isPlaying)
         {
-
-
             myBuffer = new float[data.Length];
             for (int i = 0; i < data.Length; i += channels)
             {
-
                 if (endPlayB)
                 {
                     if (stopAmp > 0)
-                    {
                         stopAmp -= releaseParam;
-                    }
                     else
-                    {
                         isPlaying = false;
-                    }
+                    
                 }
                 
-                    if (mainAmp < 1)
-                    {
-                        mainAmp += attackParam;
-                    }
+                if (mainAmp < 1)
+                {
+                    mainAmp += attackParam;
+                }
+                else
+                {
+                    if (hold < 1)
+                        hold += holdParam;
                     else
                     {
-                        if (hold < 1)
-                        {
-                            hold += holdParam;
-                        }
-                        else
-                        {
-                            if (releaseAmp > 0)
-                            {
-                                releaseAmp -= sustaneParam;
-                            }
-                        }
+                        if (releaseAmp > 0)
+                            releaseAmp -= sustaneParam;
                     }
+                }
                 
 
                 signal1 = osc1.SoundOscillator() * osc1Amp;

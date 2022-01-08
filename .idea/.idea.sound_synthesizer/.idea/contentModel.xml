@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\aizat\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\aizat\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_sound_synthesizer.1838780316.00" t="ExcludeRecursive" />
+    <e p="F:\GIT\sound_synthesizer" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="MANAGER" t="Include">
+            <e p="dependencyManager.cs" t="Include" />
+            <e p="uiManager.cs" t="Include" />
+          </e>
+          <e p="mySynth.cs" t="Include" />
+          <e p="OLD" t="Include">
+            <e p="MoogFilter.cs" t="Include" />
+          </e>
+          <e p="soundGenerator.cs" t="Include" />
+          <e p="synthSettings.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="AdsrUI.cs" t="Include" />
+            <e p="filterUI.cs" t="Include" />
+            <e p="KeyboardUI.cs" t="Include" />
+            <e p="keyUI.cs" t="Include" />
+            <e p="OscUI.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="sound_synthesizer.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
